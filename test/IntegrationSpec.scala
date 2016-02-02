@@ -18,7 +18,9 @@ class IntegrationSpec extends Specification {
 
       browser.goTo("http://localhost:" + port)
 
-      browser.pageSource must contain("Add Person")
+      browser.pageSource must contain("Lookup Vehicle")
+
+      browser.pageSource must contain("local: [  , 'TEST'  , 'ABARTH'  , 'AC'  , 'AC (ELECTRIC)'")
     }
   }
 }

@@ -181,7 +181,7 @@ return true;
         $('#MainContent_MakeTextBox').typeahead({
             name: 'VehicleMakes',
             limit: '10',
-            local: [ @models.map { m => '@m.modelName' } ]})
+            local: [ @models.map { m => , '@m.modelName' } ]})
 
 
 

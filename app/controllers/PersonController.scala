@@ -32,6 +32,7 @@ class PersonController @Inject() (repo: PersonRepository, val messagesApi: Messa
    */
   def index = Action.async {
     repo.getModels.map { models =>
+      models.map( m => s"'${m.modelName}'").mkString(",")
       Ok(views.html.index(lookupVehicleForm, models))
     }
   }
