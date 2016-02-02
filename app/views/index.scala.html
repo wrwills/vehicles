@@ -1,0 +1,361 @@
+@(person: Form[LookupVehicleForm], models: Seq[Model] = Seq())(implicit messages: Messages)
+
+@import helper._
+
+@main("Details of the vehicle being checked") {
+
+<form method="post" action="./" onsubmit="javascript:return WebForm_OnSubmit();" id="EVL" autocomplete="off">
+    <div class="aspNetHidden">
+        <input type="hidden" name="__EVENTTARGET" id="__EVENTTARGET" value="" />
+        <input type="hidden" name="__EVENTARGUMENT" id="__EVENTARGUMENT" value="" />
+        <input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwUKMTQ2ODczMjQwMA8WAh4NU2VydmljZUhlYWRlcjL8BAABAAAA/////wEAAAAAAAAADAIAAABBRG1zIFNoYXJlZCwgVmVyc2lvbj0xLjAuMC4wLCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPW51bGwFAQAAACVEbXNTaGFyZWQuRGF0YUNvbnRyYWN0cy5Db21tb24uSGVhZGVyCQAAABNjb252ZXJzYXRpb25JZEZpZWxkD29yaWdpbkRhdGVGaWVsZBJhcHBsaWNhdGlvbkNERmllbGQOY2hhbm5lbENERmllbGQOY29udGFjdElkRmllbGQNZXZlbnRGbGdGaWVsZBJzZXJ2aWNlVHlwZUNERmllbGQPbGFuZ3VhZ2VDREZpZWxkDGVuZFVzZXJGaWVsZAEAAQEAAAQEBA0JAS5EbXNTaGFyZWQuRGF0YUNvbnRyYWN0cy5Db21tb24uU2VydmljZVR5cGVDb2RlAgAAACtEbXNTaGFyZWQuRGF0YUNvbnRyYWN0cy5Db21tb24uTGFuZ3VhZ2VDb2RlAgAAACZEbXNTaGFyZWQuRGF0YUNvbnRyYWN0cy5Db21tb24uRW5kVXNlcgIAAAACAAAACvU22ZHgKtNIBgMAAAALRVZMX1NjcmVlbnMGBAAAAAhEVkxBX1dFQlqFXUoAAAAAAQX7////LkRtc1NoYXJlZC5EYXRhQ29udHJhY3RzLkNvbW1vbi5TZXJ2aWNlVHlwZUNvZGUBAAAAB3ZhbHVlX18ACAIAAAACAAAABfr///8rRG1zU2hhcmVkLkRhdGFDb250cmFjdHMuQ29tbW9uLkxhbmd1YWdlQ29kZQEAAAAHdmFsdWVfXwAIAgAAAAAAAAAKCxYCZg9kFgICAQ9kFgJmDxYCHgRUZXh0BQ9WZWhpY2xlIGVucXVpcnlkGAEFIWN0bDAwJE1haW5Db250ZW50JG12VmVoaWNsZVNlYXJjaA8PZGZk+kiICODWyb2ktjJxGDjuiC5zySo=" />
+    </div>
+
+    <script type="text/javascript">
+//<![CDATA[
+var theForm = document.forms['EVL'];
+if (!theForm) {
+    theForm = document.EVL;
+}
+function __doPostBack(eventTarget, eventArgument) {
+    if (!theForm.onsubmit || (theForm.onsubmit() != false)) {
+        theForm.__EVENTTARGET.value = eventTarget;
+        theForm.__EVENTARGUMENT.value = eventArgument;
+        theForm.submit();
+    }
+}
+//]]>
+</script>
+
+
+    <script src="@routes.Assets.versioned("javascripts/webresource_axd.js")" type="text/javascript"></script>
+    <script src="@routes.Assets.versioned("javascripts/webresource_axd2.js")" type="text/javascript"></script>
+
+
+    <script type="text/javascript">
+//<![CDATA[
+function WebForm_OnSubmit() {
+if (typeof(ValidatorOnSubmit) == "function" && ValidatorOnSubmit() == false) return false;
+return true;
+}
+//]]>
+</script>
+
+    <div class="aspNetHidden">
+
+        <input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="CA0B0334" />
+        <input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="/wEdAAfuqUqP6RzZlTJFZwgMfIr5BOwywjxOOgpEYFN2beEgnftoCCZcWJSqSRLD/FKuxxkI0x5r4gPeKgWgSNWptTEWInv2PXI3Jzdn3U6eHDG4Qb7lltCXTdtnDbitYujbDJI0GQSIMiv32DreL6oRbYpQqBCbZAw4go4bTIxXVpLLLztJKS4=" />
+    </div>
+    <script type="text/javascript">                document.body.className = ((document.body.className) ? document.body.className + ' js-enabled' : 'js-enabled');</script>
+
+    <div id="skiplink-container"><div><a href="#wrapper" class="skiplink">Skip to main content</a></div></div>
+
+    <div id="global-cookie-message">
+        <p>GOV.UK uses cookies to make the site simpler. <a href="https://www.gov.uk/help/cookies"> Find out more about cookies</a></p>
+    </div>
+    <!--end global-cookie-message-->
+
+    <header role="banner" class="with-proposition" id="global-header">
+        <div class="header-wrapper">
+            <div class="header-global">
+                <div class="header-logo">
+                    <a href="https://www.gov.uk/" title="Go to the GOV.UK homepage" id="logo" class="content">
+                        <img src="https://www.assets.vehicleenquiry.service.gov.uk/vehicleenquiry/Assets/Images/gov.uk_logotype_crown.png" width="35" height="31" alt=""> GOV.UK
+                    </a>
+                </div>
+                <!-- inside_header -->
+            </div>
+            <div class='header-proposition'>
+                <div class='content'>
+                    <nav id='proposition-menu'>
+                        <a href='/' id='proposition-name'>Vehicle enquiry</a>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!--end header-->
+
+
+
+    <div id="global-header-bar"></div>
+
+    <!--end global-header-bar-->
+    <div class="maincontent">
+        <div class="phase-banner">
+            <p>
+                <strong class="phase-tag">BETA</strong>
+                    <span>This is a new service – your <a href="mailto:evl.feedback@@dvla.gsi.gov.uk?subject=EVL%20BETA%20Service">
+                        feedback</a> will help us to improve it.</span>
+            </p>
+        </div>
+    </div>
+    <!--end of beta banner-->
+
+    <div id="wrapper">
+        <div class="maincontent">
+            <script src="https://www.assets.vehicleenquiry.service.gov.uk/vehicleenquiry/Assets/Scripts/typeahead.min.js" type="text/javascript"></script>
+
+            <div id="HeaderCont" class="start-header group">
+                <h2>
+                    Details of the vehicle being checked
+                </h2>
+            </div>
+
+            <div class="body-container group">
+
+                To make an enquiry enter the vehicle registration number (number plate) and the vehicle make.
+
+                @form(routes.PersonController.lookupVehicle()) {
+		@inputText(person("license"))
+		@inputText(person("model"))
+
+		<div class="buttons">
+			<input type="submit" value="Lookup Vehicle"/>
+		</div>}
+
+                <div class="input-block">
+                    <div class="input-block-label strong">
+                        <label for="MainContent_txtSearchVrm" id="MainContent_lblVehicleVRN">Registration number</label>
+                    </div>
+                    <span id="MainContent_rfvTxtSearchVRM" class="Validator" style="display:none;">Please enter your registration number</span>
+                    <span id="MainContent_revtxtSearchVrm1" class="Validator" style="display:none;">You must enter your registration number in a valid format</span>
+                    <div class="input-block-textbox">
+                        <input name="license" type="text" maxlength="8" id="license" class="input-large input-upper" />
+    <!--
+    <input name="ctl00$MainContent$txtSearchVrm" type="text" maxlength="8" id="MainContent_txtSearchVrm" class="input-large input-upper" />
+                        @helper.input(person("license"), args = '_label -> "", '_showConstraints -> false, '_id->"MainContent_txtSearchVrm") { (id, name, value, args) =>
+                            <input type="text" name="@name" id="@id" class="input-large input-upper" />
+                        }
+                                                <input name="ctl00$MainContent$MakeTextBox" type="text" maxlength="100" id="MainContent_MakeTextBox" class="input-large input-upper" />
+                        -->
+                    </div>
+                </div>
+
+                <div class="input-block">
+                    <div class="input-block-label strong">
+                        <label for="MainContent_MakeTextBox" id="MainContent_lblVehicleMake">Vehicle make</label>
+                    </div>
+                    <span id="MainContent_reqMakeTextBox" class="Validator" style="display:none;">You must select your vehicle make from the list</span>
+                    <div class="input-block-textbox">
+                        <input name="model" type="text" maxlength="100" id="model" class="input-large input-upper" />
+                    </div>
+                </div>
+
+                <p xmlns:utils="urn:utils" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+                    To check the vehicle tax rates and date of the latest V5C, please enter the V5C reference number.
+                </p><input type="Hidden" value="CheckLastV5CDT" xmlns:utils="urn:utils" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+                <div class="input-block">
+                    <div class="input-block-label strong">
+                        <label for="MainContent_txtV5CDocumentReferenceNumber" id="MainContent_lblV5CDocumentReferenceNumber">V5C document reference number (optional)</label>
+                    </div>
+
+                    <span id="MainContent_RegularExpressionValidator1" class="Validator" style="display:none;">Your reference number should contain 11 digits only</span>
+                    <div class="more-info-block">
+                        <input name="ctl00$MainContent$txtV5CDocumentReferenceNumber" maxlength="11" id="MainContent_txtV5CDocumentReferenceNumber" class="input-large" type="tel" pattern="[0-9]*" />
+                        <div class="more-info" tabindex="0">
+                                <span onclick="" class="more-info-link default-font-size">
+                                    Where to find this
+                                </span>
+                            <ul>
+                                <li>
+                                    Your V5C document reference number can be found on the front of your V5C :</li>
+                                <li>
+                                    <img alt="v5c" src="https://www.assets.vehicleenquiry.service.gov.uk/vehicleenquiry/Assets/Images/V5C_122x145.png" /></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="action">
+                    <input type="submit" name="ctl00$MainContent$butSearch" value="Search" onclick="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$MainContent$butSearch&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, false))" id="MainContent_butSearch" class="button" />
+                </div>
+
+            </div>
+
+            }
+
+
+
+            <script type='text/javascript'>
+        // single dataset
+        $('#MainContent_MakeTextBox').typeahead({
+            name: 'VehicleMakes',
+            limit: '10',
+            local: [ @models.map { m => '@m.modelName' } ]})
+
+
+
+        //RequiredField override
+        function RequiredFieldValidatorEvaluateIsValid(val) {
+            if ((ValidatorTrim(ValidatorGetValue(val.controltovalidate)) != ValidatorTrim(val.initialvalue)) == false) {
+                $(val).closest("div").addClass("validationReq");
+            } else {
+                $(val).closest("div").removeClass("validationReq");
+            }
+            return (ValidatorTrim(ValidatorGetValue(val.controltovalidate)) != ValidatorTrim(val.initialvalue))
+        }
+    </script>
+
+            <!-- Google Analytics -->
+            <script type="text/javascript">
+        (function (i, s, o, g, r, a, m) {
+            i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
+                (i[r].q = i[r].q || []).push(arguments)
+            }, i[r].l = 1 * new Date(); a = s.createElement(o),
+            m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
+        })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+
+        //DEV local machine
+        if (/localhost/gim.test(location.href)) {
+            ga('create', 'UA-44719962-8', 'auto');
+
+        }
+
+        //Preview site
+        if (/dsdwebspace\.co\.uk/gim.test(location.href)) {
+            ga('create', 'UA-44719962-7', 'auto');
+
+        }
+
+        //Beta
+        if (/service\.gov\.uk/gim.test(location.href)) {
+            ga('create', 'UA-44719962-4', 'auto');
+        }
+
+        ga('set', 'anonymizeIp', true)
+        ga('send', 'pageview', '/virtual/vwSearch/');
+
+    </script>
+            <!-- End Google Analytics -->
+
+            <script type="text/javascript">
+               //isNumber(event)
+        function isNumber(evt) {
+            evt = (evt) ? evt : window.event;
+            var charCode = (evt.which) ? evt.which : evt.keyCode;
+            if (charCode > 31 && (charCode < 48 || charCode > 57)) {
+                return false;
+            }
+            return true;
+        }
+
+    </script>
+        </div>
+    </div>
+
+    <footer class="group js-footer" id="footer" role="contentinfo">
+        <div class="footer-wrapper">
+            <div class="footer-meta">
+                <div class="footer-meta-inner">
+                    <ul>
+                        <li>
+                            <a href="cookies.aspx" target="_blank">Cookies</a>
+                        </li>
+                        <li>
+                            <a href="terms.aspx" target="_blank">Terms and Conditions</a>
+                        </li>
+                        <li>
+                            <a id="butEnglish" title="Click to view this site in English" href="javascript:__doPostBack(&#39;ctl00$butEnglish&#39;,&#39;&#39;)">English</a>
+                        </li>
+                        <li>
+                            <a id="butWelsh" title="Cliciwch i weld y safle hwn yn y Gymraeg" href="javascript:__doPostBack(&#39;ctl00$butWelsh&#39;,&#39;&#39;)">Welsh</a>
+                        </li>
+                        <li>
+                            Built by the <a href="https://dvladigital.blog.gov.uk/">Driver & Vehicle Licensing Agency</a>
+                        </li>
+                    </ul>
+                    <div class="open-government-licence">
+                        <p class="logo"><a href="https://www.nationalarchives.gov.uk/doc/open-government-licence/version/2/">Open Government Licence</a></p>
+                        <p>
+                            All content is available under the <a href="http://www.nationalarchives.gov.uk/doc/open-government-licence/version/2">
+                            Open Government Licence v2.0</a>, except where otherwise stated</p>
+                    </div>
+                </div>
+                <div class="copyright">
+                    <a href="http://www.nationalarchives.gov.uk/information-management/our-services/crown-copyright.htm">
+                        &copy; Crown copyright</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!--end footer-->
+    <div id="global-app-error" class="app-error hidden"></div>
+    <script type="text/javascript">
+                //used to reset the form before the form is unloaded
+                $(window).bind("beforeunload", function () {
+                    if (typeof document.forms[0] !== 'undefined') {
+                        document.forms[0].reset();
+                    }
+                });
+            </script>
+    <script src="https://www.assets.vehicleenquiry.service.gov.uk/vehicleenquiry/Assets/Scripts/core.js?30" type="text/javascript"></script>
+    <!-- govuk_frontend_toolkit js -->
+    <script src="https://www.assets.vehicleenquiry.service.gov.uk/vehicleenquiry/Assets/Scripts/polyfill/bind.js" type="text/javascript"></script>
+    <script src="https://www.assets.vehicleenquiry.service.gov.uk/vehicleenquiry/Assets/Scripts/selection-buttons.js" type="text/javascript"></script>
+
+    <script src="https://www.assets.vehicleenquiry.service.gov.uk/vehicleenquiry/Assets/Scripts/govuk-template.js?30" type="text/javascript"></script>
+
+    <!-- govuk_elements js -->
+    <script src="https://www.assets.vehicleenquiry.service.gov.uk/vehicleenquiry/Assets/Scripts/polyfill/details.polyfill.js" type="text/javascript"></script>
+
+    <script type="text/javascript">
+//<![CDATA[
+var Page_Validators =  new Array(document.getElementById("MainContent_rfvTxtSearchVRM"), document.getElementById("MainContent_revtxtSearchVrm1"), document.getElementById("MainContent_reqMakeTextBox"), document.getElementById("MainContent_RegularExpressionValidator1"));
+//]]>
+</script>
+
+    <script type="text/javascript">
+//<![CDATA[
+var MainContent_rfvTxtSearchVRM = document.all ? document.all["MainContent_rfvTxtSearchVRM"] : document.getElementById("MainContent_rfvTxtSearchVRM");
+MainContent_rfvTxtSearchVRM.controltovalidate = "MainContent_txtSearchVrm";
+MainContent_rfvTxtSearchVRM.errormessage = "You must enter your registration number in order to view your vehicle record";
+MainContent_rfvTxtSearchVRM.display = "Dynamic";
+MainContent_rfvTxtSearchVRM.evaluationfunction = "RequiredFieldValidatorEvaluateIsValid";
+MainContent_rfvTxtSearchVRM.initialvalue = "";
+var MainContent_revtxtSearchVrm1 = document.all ? document.all["MainContent_revtxtSearchVrm1"] : document.getElementById("MainContent_revtxtSearchVrm1");
+MainContent_revtxtSearchVrm1.controltovalidate = "MainContent_txtSearchVrm";
+MainContent_revtxtSearchVrm1.errormessage = "You must enter your registration number in a valid format";
+MainContent_revtxtSearchVrm1.display = "Dynamic";
+MainContent_revtxtSearchVrm1.evaluationfunction = "RegularExpressionValidatorEvaluateIsValid";
+MainContent_revtxtSearchVrm1.validationexpression = "^(([A-Za-z]{1,2}[ ]?[0-9]{1,4})|([A-Za-z]{3}[ ]?[0-9]{1,3})|([0-9]{1,3}[ ]?[A-Za-z]{3})|([0-9]{1,4}[ ]?[A-Za-z]{1,2})|([A-Za-z]{3}[ ]?[0-9]{1,3}[ ]?[A-Za-z])|([A-Za-z][ ]?[0-9]{1,3}[ ]?[A-Za-z]{3})|([A-Za-z]{2}[ ]?[0-9]{2}[ ]?[A-Za-z]{3})|([A-Za-z]{3}[ ]?[0-9]{4}))$";
+var MainContent_reqMakeTextBox = document.all ? document.all["MainContent_reqMakeTextBox"] : document.getElementById("MainContent_reqMakeTextBox");
+MainContent_reqMakeTextBox.controltovalidate = "MainContent_MakeTextBox";
+MainContent_reqMakeTextBox.errormessage = "You must select your vehicle make from the list";
+MainContent_reqMakeTextBox.display = "Dynamic";
+MainContent_reqMakeTextBox.evaluationfunction = "RequiredFieldValidatorEvaluateIsValid";
+MainContent_reqMakeTextBox.initialvalue = "";
+var MainContent_RegularExpressionValidator1 = document.all ? document.all["MainContent_RegularExpressionValidator1"] : document.getElementById("MainContent_RegularExpressionValidator1");
+MainContent_RegularExpressionValidator1.controltovalidate = "MainContent_txtV5CDocumentReferenceNumber";
+MainContent_RegularExpressionValidator1.errormessage = "The V5C reference number you have provided should be 11 digits";
+MainContent_RegularExpressionValidator1.display = "Dynamic";
+MainContent_RegularExpressionValidator1.evaluationfunction = "RegularExpressionValidatorEvaluateIsValid";
+MainContent_RegularExpressionValidator1.validationexpression = "^([0-9]{11})$";
+//]]>
+</script>
+
+
+    <script type="text/javascript">
+//<![CDATA[
+
+var Page_ValidationActive = false;
+if (typeof(ValidatorOnLoad) == "function") {
+    ValidatorOnLoad();
+}
+
+function ValidatorOnSubmit() {
+    if (Page_ValidationActive) {
+        return ValidatorCommonOnSubmit();
+    }
+    else {
+        return true;
+    }
+}
+        //]]>
+</script>
+
+</form>
+
+
+
+
+

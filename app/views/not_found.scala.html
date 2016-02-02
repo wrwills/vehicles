@@ -1,0 +1,29 @@
+@import helper._
+
+@main("Details of the vehicle being checked") {
+<div class="body-container group">
+
+    <h3 xmlns:utils="urn:utils" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">Vehicle details could not be found</h3>
+    <p xmlns:utils="urn:utils" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+        Vehicle details could not be found as it has not been possible to locate the vehicle details, your enquiry cannot proceed and has been cancelled. If you want to check the vehicle record held by DVLA...
+    </p>
+    <p xmlns:utils="urn:utils" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><strong>Please contact vehicle enquiries:</strong><ul>
+    <li>
+        Phone:<br>0300 790 6802
+    </li>
+    <li>
+        Fax:<br>0300 123 0798
+    </li>
+    <li>
+        Textphone:<br>01792 766 426
+    </li>
+</ul>
+    </p>
+    <p xmlns:utils="urn:utils" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">An advisor will be able to assist you 8.00am - 7.00pm Monday to Friday and 8.00am - 2.00pm on Saturday.</p><input type="Hidden" value="NoVehFound" xmlns:utils="urn:utils" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+
+    <div id="MainContent_divSearchAgainNotFound" class="action">
+        <a id="MainContent_butSearchAgainNotFound" href="javascript:__doPostBack(&#39;ctl00$MainContent$butSearchAgainNotFound&#39;,&#39;&#39;)">Search again</a>
+    </div>
+
+</div>
+}
