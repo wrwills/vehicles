@@ -26,7 +26,7 @@ class PersonController @Inject() (repo: PersonRepository, val messagesApi: Messa
       "model" -> nonEmptyText(2,15)
     )(LookupVehicleForm.apply)(LookupVehicleForm.unapply)
   }
-  
+
   /**
    * The index action.
    */
